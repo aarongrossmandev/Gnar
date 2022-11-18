@@ -4,7 +4,7 @@
       <div class="announce-bar" style="background: {{ block.settings.background_color }}; color: {{ block.settings.announcement_text_color }};" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
         {%- if block.settings.text != blank -%}
           {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}">
+            <a href="{{ block.settings.link }}" style="color: {{ block.settings.announcement_text_color }}; text-decoration: none;">
             {%- endif -%}
 
 
@@ -53,7 +53,7 @@
             "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
           },
           {
-            "type": "color_background",
+            "type": "color",
             "id": "background_color",
             "label": "Background",
             "default": "#00b5e2"
@@ -63,7 +63,8 @@
             "id": "announcement_text_color",
             "label": "Text Color",
             "default": "#ffffff"
-          }, {
+          }, 
+          {
             "type": "url",
             "id": "link",
             "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
