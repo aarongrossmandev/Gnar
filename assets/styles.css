@@ -270,6 +270,8 @@ table {
     background-color: #fcfcfc;
     color: #1b1b1b;
     display: flex;
+    position: -webkit-sticky;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
@@ -349,11 +351,26 @@ table {
 }
 
 .hero1 {
-    height: 100vh;
     width: 100%;
     overflow: hidden;
     position: relative;
     margin-bottom: 50px
+}
+
+.hero1--25vh {
+    height: 25vh
+}
+
+.hero1--50vh {
+    height: 50vh
+}
+
+.hero1--75vh {
+    height: 75vh
+}
+
+.hero1--100vh {
+    height: 100vh
 }
 
 .hero1--aligned-center .hero1__content-container {
@@ -404,7 +421,23 @@ table {
 .hero1__title {
     font-size: 3rem;
     font-family: Audiowide, cursive;
-    color: #fff
+    color: #fff;
+}
+
+.hero1__title--sm {
+    font-size: 2rem;
+}
+
+.hero1__title--md {
+    font-size: 3rem;
+}
+
+.hero1__title--lg {
+    font-size: 4.5rem;
+}
+
+.hero1__title--xl {
+    font-size: 6rem;
 }
 
 .hero1__paragraph {
@@ -430,12 +463,27 @@ table {
 }
 
 .hero2 {
-    height: 100vh;
     width: 100%;
     overflow: hidden;
     position: relative;
     display: flex;
     margin-bottom: 50px
+}
+
+.hero2--25vh {
+    height: 25vh
+}
+
+.hero2--50vh {
+    height: 50vh
+}
+
+.hero2--75vh {
+    height: 75vh
+}
+
+.hero2--100vh {
+    height: 100vh
 }
 
 .hero2 .hero2__collection1 {
@@ -500,6 +548,22 @@ table {
     font-size: 3rem;
     font-family: Audiowide, cursive;
     color: #fff
+}
+
+.hero2__title--sm {
+    font-size: 2rem
+}
+
+.hero2__title--md {
+    font-size: 3rem
+}
+
+.hero2__title-lg {
+    font-size: 4.5rem
+}
+
+.hero2__title-xl {
+    font-size: 6rem
 }
 
 .hero2__paragraph {
