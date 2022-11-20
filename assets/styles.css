@@ -421,23 +421,23 @@ table {
 .hero1__title {
     font-size: 3rem;
     font-family: Audiowide, cursive;
-    color: #fff;
+    color: #fff
 }
 
 .hero1__title--sm {
-    font-size: 2rem;
+    font-size: 2rem
 }
 
 .hero1__title--md {
-    font-size: 3rem;
+    font-size: 3rem
 }
 
 .hero1__title--lg {
-    font-size: 4.5rem;
+    font-size: 4.5rem
 }
 
 .hero1__title--xl {
-    font-size: 6rem;
+    font-size: 6rem
 }
 
 .hero1__paragraph {
@@ -558,11 +558,11 @@ table {
     font-size: 3rem
 }
 
-.hero2__title-lg {
+.hero2__title--lg {
     font-size: 4.5rem
 }
 
-.hero2__title-xl {
+.hero2__title--xl {
     font-size: 6rem
 }
 
@@ -593,16 +593,50 @@ table {
     padding: 50px 0
 }
 
+.collection1 div[class*=col-] {
+    margin-bottom: 1rem
+}
+
 .collection1__product-img {
     background: #eef5f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 550px;
     margin-bottom: .8rem;
     position: relative;
     cursor: pointer;
     overflow: hidden
+}
+
+.collection1__product-img--circle,
+.collection1__product-img--square {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 1.5rem
+}
+
+.collection1__product-img--circle {
+    border-radius: 50%
+}
+
+.collection1__product-img--rectangle {
+    width: 100%;
+    height: 550px;
+    margin: 0 auto 1.5rem
+}
+
+.collection1__product-img .img-link {
+    display: block;
+    width: 70%;
+    height: 100%
+}
+
+.collection1__product-img--cover img {
+    object-fit: cover
+}
+
+.collection1__product-img--contain img {
+    object-fit: contain
 }
 
 .collection1__product-img:hover img {
