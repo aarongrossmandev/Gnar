@@ -124,10 +124,11 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "50% OFF for Christmas",
               "text_alignment": "center",
-              "background_color": "#00b5e2",
+              "background_color": "#000000",
               "announcement_text_color": "#ffffff",
               "link": "shopify:\/\/collections\/adidas"
             }
