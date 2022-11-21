@@ -2,7 +2,7 @@
 {% when 'header1' %}
 <!--STARTING HEADER 1 -->
 <header class="header header1">
-
+	{{ 'Header1.css' | asset_url | stylesheet_tag }}
 
 	<ul class="header1__collections-nav">
 		{%- if section.settings.menu != blank -%}
@@ -74,8 +74,7 @@
 
 {% when 'header2' %}
 <!--STARTING HEADER 2 -->
-
-
+{{ 'Header2.css' | asset_url | stylesheet_tag }}
 <header class="header header2">
 	<div class="header2__logo">
 		<a href="{{ routes.root_url }}">
@@ -126,8 +125,7 @@
 
 {% when 'header3' %}
 <!--STARTING HEADER 3 -->
-
-
+{{ 'Header3.css' | asset_url | stylesheet_tag }}
 <header class="header header3">
 	<div class="header3__logo">
 		<a href="{{ routes.root_url }}">
@@ -170,7 +168,8 @@
 		</li>
 		<li>
 			{%- if shop.customer_accounts_enabled -%}
-			<a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+			<a
+				href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
 				<i class="fa-solid fa-user"></i>
 			</a>
 			{% endif %}

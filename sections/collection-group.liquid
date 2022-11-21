@@ -1,3 +1,4 @@
+{{ 'Collection1.css' | asset_url | stylesheet_tag }}
 <div class="collection collection1">
     <div class="container">
         <div class="row">
@@ -39,10 +40,7 @@
                             </span>
                             {%- endif -%}
                         </div>
-                        <div class="collection1__colors">
-                            <div class="collection1__color collection1__color--blue"></div>
-                            <div class="collection1__color collection1__color--black"></div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -58,252 +56,252 @@
 
 {% schema %}
 {
-    "name": "Collection Group",
-    "class": "spaced-section spaced-section-full-width",
-    "settings": [
-        {
-            "type": "select",
-            "id": "container_shape",
-            "options": [
-                {
-                    "value": "rectangle",
-                    "label": "Rectangle"
-                },
-                {
-                    "value": "square",
-                    "label": "Square"
-                },
-                {
-                    "value": "circle",
-                    "label": "Circle"
-                }
-            ],
-            "default": "square",
-            "label": "Collection Container Shape"
-        },
-        {
-            "type": "select",
-            "id": "image_fit",
-            "options": [
-                {
-                    "value": "cover",
-                    "label": "Cover"
-                },
-                {
-                    "value": "contain",
-                    "label": "Contain"
-                }
-            ],
-            "default": "contain",
-            "label": "Collection Image Fit"
-        },
-        {
-            "type": "color",
-            "id": "background",
-            "label": "Background",
-            "default": "#eef5f9"
-        },
-        {
-            "type": "checkbox",
-            "id": "show_title",
-            "label": "Show Title",
-            "default": true
-        },
-        {
-            "type": "range",
-            "id": "opacity",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "label": "Color Opacity",
-            "default": 100
-        },
-        {
-            "type": "select",
-            "id": "xxl_col",
-            "options": [
-                {
-                    "value": "col-xxl-6",
-                    "label": "2 Columns"
-                },
-                {
-                    "value": "col-xxl-4",
-                    "label": "3 Columns"
-                },
-                {
-                    "value": "col-xxl-3",
-                    "label": "4 Columns"
-                },
-                {
-                    "value": "col-xxl-2",
-                    "label": "6 Columns"
-                }
-            ],
-            "default": "col-xxl-3",
-            "label": "XXL Devices"
-        },
-        {
-            "type": "select",
-            "id": "xl_col",
-            "options": [
-                {
-                    "value": "col-xl-6",
-                    "label": "2 Columns"
-                },
-                {
-                    "value": "col-xl-4",
-                    "label": "3 Columns"
-                },
-                {
-                    "value": "col-xl-3",
-                    "label": "4 Columns"
-                },
-                {
-                    "value": "col-xl-2",
-                    "label": "6 Columns"
-                }
-            ],
-            "default": "col-xl-3",
-            "label": "XL Devices"
-        },
-        {
-            "type": "select",
-            "id": "lg_col",
-            "options": [
-                {
-                    "value": "col-lg-6",
-                    "label": "2 Columns"
-                },
-                {
-                    "value": "col-lg-4",
-                    "label": "3 Columns"
-                },
-                {
-                    "value": "col-lg-3",
-                    "label": "4 Columns"
-                },
-                {
-                    "value": "col-lg-2",
-                    "label": "6 Columns"
-                }
-            ],
-            "default": "col-lg-3",
-            "label": "Large Devices"
-        },
-        {
-            "type": "select",
-            "id": "md_col",
-            "options": [
-                {
-                    "value": "col-md-12",
-                    "label": "1 Column"
-                },
-                {
-                    "value": "col-md-6",
-                    "label": "2 Columns"
-                },
-                {
-                    "value": "col-md-4",
-                    "label": "3 Columns"
-                },
-                {
-                    "value": "col-md-3",
-                    "label": "4 Columns"
-                },
-                {
-                    "value": "col-md-2",
-                    "label": "6 Columns"
-                }
-            ],
-            "default": "col-md-3",
-            "label": "Medium Devices"
-        },
-        {
-            "type": "select",
-            "id": "sm_col",
-            "options": [
-                {
-                    "value": "col-sm-12",
-                    "label": "1 Column"
-                },
-                {
-                    "value": "col-sm-6",
-                    "label": "2 Columns"
-                },
-                {
-                    "value": "col-sm-4",
-                    "label": "3 Columns"
-                },
-                {
-                    "value": "col-sm-3",
-                    "label": "4 Columns"
-                },
-                {
-                    "value": "col-sm-2",
-                    "label": "6 Columns"
-                }
-            ],
-            "default": "col-sm-6",
-            "label": "Small Devices"
-        },
-        {
-            "type": "range",
-            "id": "padding_top",
-            "min": 0,
-            "max": 100,
-            "step": 4,
-            "unit": "px",
-            "label": "t:sections.all.padding.padding_top",
-            "default": 36
-        },
-        {
-            "type": "range",
-            "id": "padding_bottom",
-            "min": 0,
-            "max": 100,
-            "step": 4,
-            "unit": "px",
-            "label": "t:sections.all.padding.padding_bottom",
-            "default": 36
-        }
-    ],
-    "blocks": [
-        {
-            "type": "featured_collection",
-            "name": "t:sections.collection-list.blocks.featured_collection.name",
-            "settings": [
-                {
-                    "type": "collection",
-                    "id": "collection",
-                    "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
-                }
-            ]
-        }
-    ],
-    "presets": [
-        {
-            "name": "Collection Group",
-            "settings": 
-                {
-                    "background": "#eef5f9",
-                    "xxl_col": "col-xxl-4",
-                    "xl_col": "col-xl-4",
-                    "lg_col": "col-lg-4",
-                    "md_col": "col-md-4",
-                    "sm_col": "col-sm-2"
-                },
-            "blocks": [
-                {
-                    "type": "featured_collection"
-                },
-                {
-                    "type": "featured_collection"
-                },
-                {
-                    "type": "featured_collection"
-                }
-            ]
-        }
-    ]
+"name": "Collection Group",
+"class": "spaced-section spaced-section-full-width",
+"settings": [
+{
+"type": "select",
+"id": "container_shape",
+"options": [
+{
+"value": "rectangle",
+"label": "Rectangle"
+},
+{
+"value": "square",
+"label": "Square"
+},
+{
+"value": "circle",
+"label": "Circle"
+}
+],
+"default": "square",
+"label": "Collection Container Shape"
+},
+{
+"type": "select",
+"id": "image_fit",
+"options": [
+{
+"value": "cover",
+"label": "Cover"
+},
+{
+"value": "contain",
+"label": "Contain"
+}
+],
+"default": "contain",
+"label": "Collection Image Fit"
+},
+{
+"type": "color",
+"id": "background",
+"label": "Background",
+"default": "#eef5f9"
+},
+{
+"type": "checkbox",
+"id": "show_title",
+"label": "Show Title",
+"default": true
+},
+{
+"type": "range",
+"id": "opacity",
+"min": 0,
+"max": 100,
+"step": 1,
+"label": "Color Opacity",
+"default": 100
+},
+{
+"type": "select",
+"id": "xxl_col",
+"options": [
+{
+"value": "col-xxl-6",
+"label": "2 Columns"
+},
+{
+"value": "col-xxl-4",
+"label": "3 Columns"
+},
+{
+"value": "col-xxl-3",
+"label": "4 Columns"
+},
+{
+"value": "col-xxl-2",
+"label": "6 Columns"
+}
+],
+"default": "col-xxl-3",
+"label": "XXL Devices"
+},
+{
+"type": "select",
+"id": "xl_col",
+"options": [
+{
+"value": "col-xl-6",
+"label": "2 Columns"
+},
+{
+"value": "col-xl-4",
+"label": "3 Columns"
+},
+{
+"value": "col-xl-3",
+"label": "4 Columns"
+},
+{
+"value": "col-xl-2",
+"label": "6 Columns"
+}
+],
+"default": "col-xl-3",
+"label": "XL Devices"
+},
+{
+"type": "select",
+"id": "lg_col",
+"options": [
+{
+"value": "col-lg-6",
+"label": "2 Columns"
+},
+{
+"value": "col-lg-4",
+"label": "3 Columns"
+},
+{
+"value": "col-lg-3",
+"label": "4 Columns"
+},
+{
+"value": "col-lg-2",
+"label": "6 Columns"
+}
+],
+"default": "col-lg-3",
+"label": "Large Devices"
+},
+{
+"type": "select",
+"id": "md_col",
+"options": [
+{
+"value": "col-md-12",
+"label": "1 Column"
+},
+{
+"value": "col-md-6",
+"label": "2 Columns"
+},
+{
+"value": "col-md-4",
+"label": "3 Columns"
+},
+{
+"value": "col-md-3",
+"label": "4 Columns"
+},
+{
+"value": "col-md-2",
+"label": "6 Columns"
+}
+],
+"default": "col-md-3",
+"label": "Medium Devices"
+},
+{
+"type": "select",
+"id": "sm_col",
+"options": [
+{
+"value": "col-sm-12",
+"label": "1 Column"
+},
+{
+"value": "col-sm-6",
+"label": "2 Columns"
+},
+{
+"value": "col-sm-4",
+"label": "3 Columns"
+},
+{
+"value": "col-sm-3",
+"label": "4 Columns"
+},
+{
+"value": "col-sm-2",
+"label": "6 Columns"
+}
+],
+"default": "col-sm-6",
+"label": "Small Devices"
+},
+{
+"type": "range",
+"id": "padding_top",
+"min": 0,
+"max": 100,
+"step": 4,
+"unit": "px",
+"label": "t:sections.all.padding.padding_top",
+"default": 36
+},
+{
+"type": "range",
+"id": "padding_bottom",
+"min": 0,
+"max": 100,
+"step": 4,
+"unit": "px",
+"label": "t:sections.all.padding.padding_bottom",
+"default": 36
+}
+],
+"blocks": [
+{
+"type": "featured_collection",
+"name": "t:sections.collection-list.blocks.featured_collection.name",
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Collection Group",
+"settings":
+{
+"background": "#eef5f9",
+"xxl_col": "col-xxl-4",
+"xl_col": "col-xl-4",
+"lg_col": "col-lg-4",
+"md_col": "col-md-4",
+"sm_col": "col-sm-2"
+},
+"blocks": [
+{
+"type": "featured_collection"
+},
+{
+"type": "featured_collection"
+},
+{
+"type": "featured_collection"
+}
+]
+}
+]
 }
 {% endschema %}

@@ -42,6 +42,8 @@
   assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
   %}
 
+
+
   {% style %}
   {{ settings.type_body_font | font_face: font_display: 'swap' }}
   {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -291,7 +293,59 @@
       rel="stylesheet" />
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'vendors.css' | asset_url | stylesheet_tag }}
+
+
+
+    {% style %}
+    :root {
+    --announce-bar-default: #00b5e2;
+    --body-bg: {{ settings.body_bg }};
+    }
+
+    body {
+    background-color: var(--body-bg)
+    }
+
+    a:hover {
+    color: #e63b49
+    }
+
+    .fixed-nav.transparent-nav .header {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none
+    }
+
+    .fixed-nav.transparent-nav .header a {
+    color: #fff
+    }
+
+    .fixed-nav.transparent-nav .header a:hover {
+    color: #e63b49
+    }
+
+    .fixed-nav.transparent-nav .header a i {
+    padding-left: 1px
+    }
+
+    .fixed-nav.transparent-nav .header .header1__collection-link .collection-link__sub-links a,
+    .fixed-nav.transparent-nav .header .header2__collection-link .collection-link__sub-links a,
+    .fixed-nav.transparent-nav .header .header3__collection-link .collection-link__sub-links a {
+    color: #000
+    }
+
+    .fixed-nav.transparent-nav .header .header1__collection-link .collection-link__sub-links a:hover,
+    .fixed-nav.transparent-nav .header .header2__collection-link .collection-link__sub-links a:hover,
+    .fixed-nav.transparent-nav .header .header3__collection-link .collection-link__sub-links a:hover {
+    color: #e63b49
+    }
+
+    .fixed-nav .header {
+    position: fixed;
+    width: 100%;
+    z-index: 20
+    }
+    {% endstyle %}
 
     {%- unless settings.type_body_font.system? -%}
     <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -313,7 +367,7 @@
     </script>
 </head>
 
-<body class="gradient fixed-nav transparent-nav">
+<body class="gradient fixed-nav transparent-nav" style="background: var(--body-bg)">
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
   </a>
