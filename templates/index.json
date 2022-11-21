@@ -109,7 +109,7 @@
       }
     },
     "c3eb7009-ac49-4bff-b30a-126216294efc": {
-      "type": "collection-products-single",
+      "type": "collection-products",
       "settings": {
         "collection": "",
         "total_products": 8,
@@ -177,7 +177,7 @@
       }
     },
     "64d0ced1-f08b-43ce-be7e-25d3c97b826f": {
-      "type": "collection-products-single",
+      "type": "collection-products",
       "settings": {
         "collection": "",
         "total_products": 8,
