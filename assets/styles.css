@@ -854,12 +854,15 @@ table {
 }
 
 .footer__social-icons {
-    display: flex
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer__social-link {
     display: block;
-    padding: 20px;
+    padding: 20px 10px;
     color: #7e7e7e
 }
 
@@ -867,13 +870,15 @@ table {
     border-top: 1px solid #7e7e7e;
     padding: 20px 0 0;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer__copyright,
 .footer__extra-links a {
     color: #7e7e7e;
-    font-size: .8rem
+    font-size: .8rem;
+    margin: 0!important;
 }
 
 .footer__extra-links a {
