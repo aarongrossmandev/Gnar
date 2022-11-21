@@ -127,7 +127,8 @@
             "settings": {
               "text": "50% OFF for Christmas",
               "text_alignment": "center",
-              "color_scheme": "background-1",
+              "background_color": "#00b5e2",
+              "announcement_text_color": "#ffffff",
               "link": "shopify:\/\/collections\/adidas"
             }
           }
@@ -141,10 +142,11 @@
       "header": {
         "type": "header",
         "settings": {
+          "header_type": "header3",
           "color_scheme": "background-1",
           "logo_width": 90,
-          "logo_position": "middle-left",
           "menu": "main-menu",
+          "menu_two": "main-menu",
           "menu_type_desktop": "dropdown",
           "show_line_separator": true,
           "enable_sticky_header": true,
@@ -166,18 +168,14 @@
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1",
-          "footer-2"
+          "footer-0"
         ],
         "settings": {
-          "color_scheme": "background-1",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
+          "newsletter_paragraph": "Text you want to put in here to talk about your newsletter or what they're signing up for.",
           "show_social": true,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": true,
+          "footer_bottom_menu": "",
           "margin_top": 48,
           "padding_top": 36,
           "padding_bottom": 36
@@ -329,8 +327,9 @@
               "type": "announcement",
               "settings": {
                 "text": "Welcome to our store",
-                "color_scheme": "background-1",
-                "link": ""
+                "link": "",
+                "background_color": "#00b5e2",
+                "announcement_text_color": "#ffffff"
               }
             }
           },
@@ -345,7 +344,6 @@
           "settings": {
             "color_scheme": "background-1",
             "logo_width": 90,
-            "logo_position": "middle-left",
             "menu": "main-menu",
             "show_line_separator": true,
             "enable_sticky_header": true,
@@ -362,20 +360,14 @@
                 "menu": "footer"
               }
             }
-           },
+          },
           "block_order": [
-            "footer-0",
-            "footer-0",
             "footer-0"
           ],
           "settings": {
-            "color_scheme": "background-1",
             "newsletter_enable": true,
             "newsletter_heading": "Subscribe to our emails",
             "show_social": true,
-            "enable_country_selector": true,
-            "enable_language_selector": true,
-            "payment_enable": true,
             "margin_top": 48,
             "padding_top": 36,
             "padding_bottom": 36
