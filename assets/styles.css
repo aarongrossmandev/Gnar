@@ -7950,8 +7950,7 @@ a:hover {
 }
 
 .fixed-nav.transparent-nav .header {
-    background: transparent;
-    box-shadow: none
+   box-shadow: none
 }
 
 .fixed-nav.transparent-nav .header a {

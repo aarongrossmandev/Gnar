@@ -337,13 +337,13 @@
     .fixed-nav.transparent-nav .header .header1__collection-link .collection-link__sub-links a:hover,
     .fixed-nav.transparent-nav .header .header2__collection-link .collection-link__sub-links a:hover,
     .fixed-nav.transparent-nav .header .header3__collection-link .collection-link__sub-links a:hover {
-    color: #e63b49
+    color: #e63b49;
     }
 
     .fixed-nav .header {
     position: fixed;
     width: 100%;
-    z-index: 20
+    z-index: 20;
     }
     {% endstyle %}
 
@@ -367,7 +367,9 @@
     </script>
 </head>
 
-<body class="gradient fixed-nav transparent-nav" style="background: var(--body-bg)">
+<body
+  class="{% if settings.header_sticky == true %}fixed-nav {% endif %} {% if settings.header_transparent == true %}transparent-nav{% endif %}"
+  style="background: var(--body-bg)">
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
   </a>
